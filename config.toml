@@ -1,0 +1,4 @@
+baseURL = "https://blog.rakinu.com/"
+languageCode = "en-us"
+title = "stdout"
+theme = "kiss"
