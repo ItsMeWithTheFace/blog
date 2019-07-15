@@ -19,12 +19,14 @@ jobs:
           name: Build the project
           command: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - run:
-          name: Install NodeJS and npm
-          command: apk update && apk add --update nodejs nodejs-npm
+          name: Install Yarn
+          command: apk update && apk add --update yarn
       - run:
           name: Deploy to Surge.sh
           command: |
-            npx surge --project $HUGO_BUILD_DIR --domain blog.rakinu.com
+            export PATH="$PATH:$(yarn global bin)"
+            yarn global add surge
+            surge --project $HUGO_BUILD_DIR --domain blog.rakinu.com
 workflows:
   version: 2
   build_and_deploy:
