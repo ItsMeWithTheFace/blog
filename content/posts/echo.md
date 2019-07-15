@@ -8,4 +8,4 @@ This space will serve as a place for me to talk about random problems I've worke
 I find interesting.
 
 I'll mostly be using this to look back and reflect on the things but someone out there
-may find this useful, who knows ¯\_(ツ)_/¯
+may find this useful, who knows ¯\\_(ツ)_/¯
