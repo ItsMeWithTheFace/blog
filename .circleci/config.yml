@@ -19,8 +19,8 @@ jobs:
           name: Build the project
           command: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - run:
-          name: Install NodeJS
-          command: apk update && apk add nodejs
+          name: Install NodeJS and npm
+          command: apk update && apk add --update nodejs nodejs-npm
       - run:
           name: Deploy to Surge.sh
           command: |
