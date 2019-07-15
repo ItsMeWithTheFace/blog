@@ -13,13 +13,16 @@ jobs:
       HUGO_BUILD_DIR: ./public
 
     steps:
+      - run:
+          name: Install dependencies
+          command: apk update && apk add --update yarn git
       - checkout
+      - run:
+          name: Install submodules
+          command: git submodule sync && git submodule update --init
       - run:
           name: Build the project
           command: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
-      - run:
-          name: Install Yarn
-          command: apk update && apk add --update yarn
       - run:
           name: Deploy to Surge.sh
           command: |
