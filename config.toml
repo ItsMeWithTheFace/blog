@@ -2,3 +2,16 @@ baseURL = "https://blog.rakinu.com/"
 languageCode = "en-us"
 title = "stdout"
 theme = "kiss"
+copyright = "&copy; <a href=\"https://github.com/ItsMeWithTheFace\">Rakin Uddin</a> 2019"
+googleAnalytics = "UA-126034015-2"
+enableRobotsTXT = true
+
+[params.info]
+homeTitle = "stdout" # Title for home page
+
+[params.social]
+github = "ItsMeWithTheFace"
+linkedin = "rakinuddin"
+
+[params.social.config]
+platforms = ["github","linkedin"]
